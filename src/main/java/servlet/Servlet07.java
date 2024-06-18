@@ -15,6 +15,9 @@ public class Servlet07 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//변수의 범위 jsp에서 설명
+//		requestScope, sessionScope, ApplicationScope -> name 속성 설정
+		
+		
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/07.jsp");
 		rd.forward(request, response);

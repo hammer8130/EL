@@ -9,7 +9,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
 <title>Insert title here</title>
 </head>
 <body>
@@ -23,9 +23,16 @@
 	
 	<h2>el</h2>                   
 	
-
-
-
+	<h3>특정 스코프의 속성에 접근</h3>
+	<ul>
+		<li>PageScope :${pageScope.name }</li>
+		<li>RequestScope : ${requestScope.name }</li>
+		<li>SessionScope : ${sessionScope.name }</li>
+		<li>ApplicationScope : ${applicationScope.name }</li>
+	</ul>
+	
+	<p>name bean : ${name}</p>	
+	
 
 
 	<br/>

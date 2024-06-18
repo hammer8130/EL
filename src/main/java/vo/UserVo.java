@@ -61,7 +61,7 @@ public class UserVo {
 
 	@Override
 	public String toString() {
-		return "UserVo [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", gender="
+		return "UserVo [번호=" + no + ", 이름=" + name + ", 이메일=" + email + ", 비밀번호=" + password + ", 성별="
 				+ gender + "]";
 	}
 

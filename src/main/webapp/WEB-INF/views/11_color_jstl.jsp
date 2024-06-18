@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<%
+<%-- 	<%
 	if( "1".equals( request.getParameter("color") ) ) {	
 	%>
 		<span style="color: red">빨강</span>
@@ -30,7 +30,26 @@
 		<span style="color: blue">파랑</span>
 	<%
 	}
-	%>
+	%> --%>
+	
+<!-- c:choose
+	여러 상황 중 한가지 선택
+	c:when, c:otherwise 서브태그 
+-->
+<c:choose>
+	<c:when test="${param.color==1 }">
+		<span style="color: red;">빨강2</span>
+	</c:when>
+	<c:when test="${param.color==2 }">
+		<span style="color: blue;">파랑2</span>
+	</c:when>
+	<c:when test="${param.color==3 }">
+		<span style="color: hotpink;">핫핑크2</span>
+	</c:when>
+	<c:otherwise>
+		<span style="color: black;">검정</span>
+	</c:otherwise>
+</c:choose>
 
 
 	

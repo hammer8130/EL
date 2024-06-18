@@ -18,12 +18,21 @@ public class Servlet04 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		UserVo userVo = new UserVo(1, "박명수", "park", "1234", "male");
+		
+//		PageScope는 Servlet으로 세팅할 수 없다.
+		
+//		RequestScope
 		request.setAttribute("userVo", userVo);
-		
-		
 		request.setAttribute("num", 1);
 		request.setAttribute("str", "안녕하세요");
 		
+//		SessionScope
+		UserVo userVo2 = new UserVo(2,"정우찬","Jung","5678","male");
+		request.getSession(true).setAttribute("userVo2", userVo2);
+		
+//		ApplicationScope은 모든 Servlet이 공유하는 객체이다.
+		UserVo userVo3 = new UserVo(3,"홈즈","Homes","9876","male");
+		request.getServletContext().setAttribute("userVo3", userVo3);
 		
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/04.jsp");
